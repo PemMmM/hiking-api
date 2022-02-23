@@ -48,9 +48,39 @@ CREATE TABLE users(
   user_id int AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
-  email VARCHAR(50) NOT NULL UNIQUE,
+  phone_number int (50),
+  email VARCHAR(70) NOT NULL UNIQUE,
   password VARCHAR(500) NOT NULL,
+  date_of_birth DATETIME NOT NULL,
   user_type_id int NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  image VARCHAR(300),
   FOREIGN KEY (user_type_id) REFERENCES user_types(user_type_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS path_difficulties;
+CREATE TABLE path_difficulties(
+  path_difficulty_id int AUTO_INCREMENT PRIMARY KEY,
+  path_difficulty VARCHAR(20)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE path_categories(
+  path_categories_id int AUTO_INCREMENT PRIMARY KEY,
+  path_category VARCHAR(20)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS paths;
+CREATE TABLE paths(
+  path_id int AUTO_INCREMENT PRIMARY KEY,
+  path_title VARCHAR(40),
+  path_desc VARCHAR(150),
+  city VARCHAR(30),
+  country VARCHAR(30),
+  path_difficulty_id int NOT NULL,
+  av_length VARCHAR(30),
+  path_category_id int NOT NULL,
+  image VARCHAR(300),
+FOREIGN KEY (path_category_id) REFERENCES path_categories(path_categories_id)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
