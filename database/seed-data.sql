@@ -24,3 +24,9 @@ VALUES (1, "Ipek", "Soltanov", +905331234589, "ipek@ipek.com", "ipek, 06.05.1988
 INSERT INTO users (first_name, last_name, phone_number, email, password, date_of_birth, user_type_id, image)
 VALUES (1, "Feri", "Canselen", +905331234590, "feri@feri.com", "feri, 02.08.1999",1,",mage/url/feri");
 
+INSERT INTO path_difficulties (path_difficulty)
+VALUES (1);
+INSERT INTO path_difficulties (path_difficulty)
+VALUES (2);
+INSERT INTO path_difficulties (path_difficulty)
+VALUES (3);
