@@ -8,7 +8,7 @@ const authorise = require("./middlewares/authorisation");
 const getUserTypes = require("./controllers/users/userTypes");
 const { ADMIN } = require("~root/constants/userTypes");
 // PATH IMPORTS
-const getAllPaths = require("../app/controllers/paths/getPaths/index");
+const getAllPaths = require("./controllers/paths/getAllPaths/index");
 
 const router = express.Router();
 

@@ -1,5 +1,6 @@
 const handleAPIError = require("~root/utils/handleAPIError");
 const fetchAllPaths = require("~root/actions/paths/fetchAllPaths");
+
 const getAllPaths = async (req, res) => {
   try {
     const { paths } = await fetchAllPaths();
