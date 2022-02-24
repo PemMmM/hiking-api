@@ -48,7 +48,7 @@ CREATE TABLE users(
   user_id int AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
-  phone_number int (50),
+  phone_number VARCHAR(70),
   email VARCHAR(70) NOT NULL UNIQUE,
   password VARCHAR(500) NOT NULL,
   date_of_birth DATETIME NOT NULL,
@@ -73,7 +73,7 @@ DROP TABLE IF EXISTS paths;
 CREATE TABLE paths(
   path_id int AUTO_INCREMENT PRIMARY KEY,
   path_title VARCHAR(40),
-  path_desc VARCHAR(150),
+  path_description VARCHAR(150),
   city VARCHAR(30),
   country VARCHAR(30),
   path_difficulty_id int NOT NULL,
