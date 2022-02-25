@@ -7,6 +7,8 @@ const authentication = require("./middlewares/authentication");
 const authorise = require("./middlewares/authorisation");
 const getUserTypes = require("./controllers/users/userTypes");
 const { ADMIN } = require("~root/constants/userTypes");
+// PATH IMPORTS
+const getAllPaths = require("./controllers/paths/getAllPaths/index");
 
 const router = express.Router();
 
@@ -22,4 +24,6 @@ router.put("/edit/user", authentication, putUserDetails);
 
 router.get("/user-types", getUserTypes);
 
+// PATH ROUTES
+router.get("/get-allPaths", getAllPaths);
 module.exports = router;
