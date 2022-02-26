@@ -13,6 +13,7 @@ const getPathByPathId = require("./controllers/paths/getPathByPathId/index");
 
 // REVIEW IMPORTS
 const getReviewByReviewId = require("./controllers/reviews/getReviewByReviewId");
+const getPathByCity = require("./controllers/paths/getPathByCity");
 
 const router = express.Router();
 
@@ -34,4 +35,7 @@ router.get("/get-path/:pathId", getPathByPathId);
 
 // REVIEW ROUTES
 router.get("/get-review-by/:reviewId", getReviewByReviewId);
+
+router.get("/path/:city", getPathByCity);
+
 module.exports = router;
