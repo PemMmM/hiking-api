@@ -42,3 +42,10 @@ INSERT INTO paths (path_title, path_description, city, country, path_difficulty_
 VALUES ("kumyali-lagun-kumyali", "kumyali path", "iskele", "kktc", 1, "7km", 2, "image/url/kumyali_path");
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
 VALUES ("korucam-sahil-korucam", "korucam path", "guzelyurt", "kktc", 2, "8km", 1, "image/url/korucam_path");
+
+INSERT INTO reviews (user_id, path_id,review_stars)
+VALUES (1, 1, 5);
+INSERT INTO reviews (user_id, path_id,review_stars)
+VALUES (2, 2, 5);
+INSERT INTO reviews (user_id, path_id,review_stars)
+VALUES (3, 3, 5);

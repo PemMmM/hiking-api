@@ -9,6 +9,10 @@ const getUserTypes = require("./controllers/users/userTypes");
 const { ADMIN } = require("~root/constants/userTypes");
 // PATH IMPORTS
 const getAllPaths = require("./controllers/paths/getAllPaths/index");
+const getPathByPathId = require("./controllers/paths/getPathByPathId/index");
+
+// REVIEW IMPORTS
+const getReviewByReviewId = require("./controllers/reviews/getReviewByReviewId");
 
 const router = express.Router();
 
@@ -26,4 +30,8 @@ router.get("/user-types", getUserTypes);
 
 // PATH ROUTES
 router.get("/get-allPaths", getAllPaths);
+router.get("/get-path/:pathId", getPathByPathId);
+
+// REVIEW ROUTES
+router.get("/get-review-by/:reviewId", getReviewByReviewId);
 module.exports = router;
