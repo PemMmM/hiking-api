@@ -83,4 +83,13 @@ CREATE TABLE paths(
 FOREIGN KEY (path_category_id) REFERENCES path_categories(path_categories_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+DROP TABLE IF EXISTS reviews;
+CREATE TABLE reviews(
+  review_id int AUTO_INCREMENT PRIMARY KEY,
+  user_id int NOT NULL,
+  path_id int NOT NULL,
+  review_stars int NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
+  FOREIGN KEY (path_id) REFERENCES paths(path_id)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE utf8mb4_unicode_ci; 
 
