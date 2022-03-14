@@ -30,8 +30,8 @@ router.put("/edit/user", authentication, putUserDetails);
 router.get("/user-types", getUserTypes);
 
 // PATH ROUTES
-router.get("/get-allPaths", getAllPaths);
-router.get("/get-path/:pathId", getPathByPathId);
+router.get("/paths", getAllPaths);
+router.get("/paths/:pathId", getPathByPathId);
 
 // REVIEW ROUTES
 router.get("/get-review-by/:reviewId", getReviewByReviewId);
