@@ -5,13 +5,12 @@ const selectUser = ({ email, password }) => submitQuery`
         user_id,
         first_name,
         last_name,
-        password,
-        organization_id,
-        job_title,
-        email,
         phone_number,
+        email,
+        password,
+        date_of_birth,
         user_types.user_type_id,
-        user_types.user_type
+        image
     FROM users
     LEFT JOIN user_types ON users.user_type_id = user_types.user_type_id
     WHERE email = ${email}
