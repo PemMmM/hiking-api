@@ -18,11 +18,11 @@ const postUserSchema = yup.object().shape({
     .required()
     .label("password")
     .typeError("password must be a number."),
-  userTypeId: yup
-    .number()
-    .required()
-    .label("User Type ID")
-    .typeError("User Type Id must be a number."),
+  // userTypeId: yup
+  //   .number()
+  //   .required()
+  //   .label("User Type ID")
+  //   .typeError("User Type Id must be a number."),
   email: yup
     .string()
     .email()

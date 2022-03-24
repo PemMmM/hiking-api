@@ -1,4 +1,4 @@
-const { submitQuery, camelKeys } = require("~root/lib/database");
+const { submitQuery, camelKeys, getFirst } = require("~root/lib/database");
 
 const selectPathByPathId = ({ pathId }) => submitQuery`
 SELECT 
@@ -8,4 +8,4 @@ paths
 WHERE path_id = ${pathId}
 `;
 
-module.exports = camelKeys(selectPathByPathId);
+module.exports = getFirst(camelKeys(selectPathByPathId));
