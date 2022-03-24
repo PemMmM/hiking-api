@@ -18,11 +18,11 @@ INSERT INTO user_types (user_type_id, user_type)
 VALUES (2, "user");
 
 INSERT INTO users (first_name, last_name, phone_number, email, password, date_of_birth, user_type_id, image)
-VALUES ("Pembe", "Mistikoglu", 905331234567, "pembe@pembe.com", "pembe", "1992-02-03 12:00:00",1,"image/url/pembe");
+VALUES ("Pembe", "Mistikoglu", 905331234567, "pembe@pembe.com",SHA2(CONCAT("12345678","SECRET_SALT"), 224), "1992-02-03 12:00:00",1,"image/url/pembe");
 INSERT INTO users (first_name, last_name, phone_number, email, password, date_of_birth, user_type_id, image)
-VALUES ("Ipek", "Soltanov", 905331234589, "ipek@ipek.com", "ipek", "1988-12-04 08:00:00",1,"image/url/ipek");
+VALUES ("Ipek", "Soltanov", 905331234589, "ipek@ipek.com",SHA2(CONCAT("12345678","SECRET_SALT"), 224), "1988-12-04 08:00:00",1,"image/url/ipek");
 INSERT INTO users (first_name, last_name, phone_number, email, password, date_of_birth, user_type_id, image)
-VALUES ("Feri", "Canselen", 905331234590, "feri@feri.com", "feri", "1999-08-24 12:00:02",1,"image/url/feri");
+VALUES ("Feri", "Canselen", 905331234590, "feri@feri.com",SHA2(CONCAT("12345678","SECRET_SALT"), 224), "1999-08-24 12:00:02",1,"image/url/feri");
 
 INSERT INTO path_difficulties (path_difficulty)
 VALUES (1);
