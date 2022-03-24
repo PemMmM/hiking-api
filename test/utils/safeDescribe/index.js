@@ -4,9 +4,9 @@
 const mocha = require("mocha");
 const chalk = require("chalk");
 const flattenDeep = require("lodash/flattenDeep");
+const { _getTransactionStack } = require("~root/lib/database");
 const getTableNames = require("./queries/getTableNames");
 const getTableRowCount = require("./queries/getTableRowCount");
-const { _getTransactionStack } = require("~root/lib/database");
 
 function getTableSize(tableSizes) {
   return flattenDeep(tableSizes).reduce((acc, curr) => {
