@@ -19,12 +19,7 @@ const router = express.Router();
 
 // USER MANAGEMENT
 router.post("/login", postLogin);
-router.post(
-  "/register",
-  authentication,
-  authorise({ roles: [ADMIN] }),
-  postUser
-);
+router.post("/register", postUser);
 
 // USER MODIFICATION
 router.put("/edit/user", authentication, putUserDetails);

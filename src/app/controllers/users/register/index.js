@@ -3,7 +3,14 @@ const handleAPIError = require("~root/utils/handleAPIError");
 const postUserSchema = require("./schemas/postUserSchema");
 
 const postUser = async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    password,
+    phoneNumber,
+    dateOfBirth
+  } = req.body;
 
   try {
     await postUserSchema.validate(
@@ -11,7 +18,9 @@ const postUser = async (req, res) => {
         firstName,
         lastName,
         email,
-        password
+        password,
+        phoneNumber,
+        dateOfBirth
       },
       {
         abortEarly: false
@@ -22,7 +31,9 @@ const postUser = async (req, res) => {
       firstName,
       lastName,
       email,
-      password
+      password,
+      phoneNumber,
+      dateOfBirth
     });
 
     res.status(201).send({
