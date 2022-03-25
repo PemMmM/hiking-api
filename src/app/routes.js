@@ -5,6 +5,7 @@ const postUser = require("./controllers/users/register");
 const putUserDetails = require("./controllers/users/putUserDetails");
 const authentication = require("./middlewares/authentication");
 const getUserTypes = require("./controllers/users/userTypes");
+
 // PATH IMPORTS
 const getAllPaths = require("./controllers/paths/getAllPaths/index");
 const getPathByPathId = require("./controllers/paths/getPathByPathId/index");
