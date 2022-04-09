@@ -37,7 +37,7 @@ INSERT INTO path_categories (path_category)
 VALUES ("walking");
 
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
-VALUES ("agirdag-kartalsuyu-agirdag", "agirdag path", "girne", "kktc", 3, "11km", 1, "image/url/agirdag_path");
+VALUES ("agirdag-kartalsuyu-agirdag", "agirdag path", "girne", "kktc", 3, "11km", 1, "https://www.pexels.com/photo/gray-walkway-near-green-leafed-trees-1857628/");
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
 VALUES ("kumyali-lagun-kumyali", "kumyali path", "iskele", "kktc", 1, "7km", 2, "image/url/kumyali_path");
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
