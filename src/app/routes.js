@@ -5,6 +5,8 @@ const postUser = require("./controllers/users/register");
 const putUserDetails = require("./controllers/users/putUserDetails");
 const authentication = require("./middlewares/authentication");
 const getUserTypes = require("./controllers/users/userTypes");
+const getUserDetails = require("./controllers/users/getUserDetails");
+
 
 // PATH IMPORTS
 const getAllPaths = require("./controllers/paths/getAllPaths/index");
@@ -19,6 +21,7 @@ const router = express.Router();
 // USER MANAGEMENT
 router.post("/login", postLogin);
 router.post("/register", postUser);
+router.get("/user-details", authentication, getUserDetails);
 
 // USER MODIFICATION
 router.put("/edit/user", authentication, putUserDetails);
