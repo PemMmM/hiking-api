@@ -37,11 +37,11 @@ INSERT INTO path_categories (path_category)
 VALUES ("walking");
 
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
-VALUES ("agirdag-kartalsuyu-agirdag", "agirdag path", "girne", "kktc", 3, "11km", 1, "https://www.pexels.com/photo/gray-walkway-near-green-leafed-trees-1857628/");
+VALUES ("Soli Trail", "The trailhead is the entrance gate of Soli Ruins near Yedidalga(Potamusdu-Gambu) Village. ", "Lefka", "North Cyprus", 1, "8.5km", 1, "https://images.pexels.com/photos/1857628/pexels-photo-1857628.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
-VALUES ("kumyali-lagun-kumyali", "kumyali path", "iskele", "kktc", 1, "7km", 2, "image/url/kumyali_path");
+VALUES ("Kalkanli Anit Zeytinleri Trail", "The trailhead is located near 'Cardak Cafe', and the picnic area on the mainroad between Tepebasi(Diorios) and Kalkanli(Kapouti) villages.", "Morphou", "North Cyprus", 1, "6.5km", 2, "https://images.pexels.com/photos/1431592/pexels-photo-1431592.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
 INSERT INTO paths (path_title, path_description, city, country, path_difficulty_id, av_length, path_category_id, image)
-VALUES ("korucam-sahil-korucam", "korucam path", "guzelyurt", "kktc", 2, "8km", 1, "image/url/korucam_path");
+VALUES ("Karsiyaka Trail", "The trailhead is the entrance gate of the Karsiyaka Cental Elementary School in Karsiyaka(Vasilia) Village.", "Kyrenia", "North Cyprus", 3, "6.5km", 1, "https://images.pexels.com/photos/2423257/pexels-photo-2423257.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
 
 INSERT INTO reviews (user_id, path_id,review_stars)
 VALUES (1, 1, 5);
@@ -49,3 +49,4 @@ INSERT INTO reviews (user_id, path_id,review_stars)
 VALUES (2, 2, 5);
 INSERT INTO reviews (user_id, path_id,review_stars)
 VALUES (3, 3, 5);
+
